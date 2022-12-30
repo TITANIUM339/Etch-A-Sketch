@@ -7,8 +7,27 @@
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Etch-a-Sketch</title>
+    <link rel="shortcut icon" href="./images/pen-icon.png">
 </head>
 <body>
-    <div class="grid-container" draggable="false"></div>
+    <header class="header"><h1>Etch-a-Sketch</h1></header>
+    <main class="main">
+        <div class="settings-container">
+            <input type="color" id="colorPicker">
+            <button id="color">Color</button>
+            <button id="rainbow">Rainbow</button>
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
+            <div class="slider-value"></div>
+            <input id="slider" type="range" min="1" max="100" value="16">
+        </div>
+        <div class="grid-container"></div>
+    </main>
+    <footer class="footer">
+        <span class="copyright"></span>
+        <span class="icon">
+            <a href="https://github.com/TITANIUM339" target="_blank"><img id="githubIcon" src="./images/github.svg" alt="github icon"></a>
+        </span>
+    </footer>
 </body>
 </html>

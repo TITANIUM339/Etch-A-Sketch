@@ -2,19 +2,46 @@ body {
     height: 100vh;
     margin: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background-color: #F2E9E4;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.header {
+    padding-top: 25px;
+    color: #9A8C98;
+}
+
+.footer {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ededed;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-bottom: 25px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 50px;
+    width: 100%;
 }
 
 .grid-container {
     display: grid;
     aspect-ratio: 1 / 1;
-    max-width: 800px;
-    max-height: 800px;
+    max-width: 700px;
+    max-height: 700px;
     width: 100%;
     height: auto;
-    margin: 50px;
+    margin: 0px 10px 0px 10px;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.100);
 }
 
@@ -26,6 +53,48 @@ body {
     text-align: center;
 }
 
-.grid-item:hover {
-    background-color: black;
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+button, input {
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #4a4e69;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    transition: all .1s ease-in-out;
+}
+
+button:hover, input:hover {
+    transform: scale(1.1);
+}
+
+#color {
+    background-color: #22223b;
+}
+
+#slider {
+    accent-color: #C9ADA7;
+}
+
+#clear:active {
+    background-color: #22223b;
+}
+
+#githubIcon {
+    max-width: 25px;
+    height: auto;
+    transition: all .2s ease-in-out;
+}
+
+#githubIcon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
