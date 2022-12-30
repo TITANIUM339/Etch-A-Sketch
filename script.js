@@ -178,20 +178,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Displaying currently selected gridDensity.
     sliderValueDisplay.textContent = `${gridDensity} X ${gridDensity}`;
 
-    initiateGrid(gridContainer, gridDensity);
-
-    // Event listener for when the user changes the grid value.
-    slider.addEventListener("input", (event) => {
+    // Changing gridDensity value when user moves the slider.
+    slider.addEventListener("input", (event) => { 
         // Getting new gridDensity value.
         gridDensity = parseInt(event.target.value);
 
+        // Displaying new gridDensity value.
+        sliderValueDisplay.textContent = `${gridDensity} X ${gridDensity}`;
+    });
+
+    initiateGrid(gridContainer, gridDensity);
+
+    // Generating a new grid when the user moves the slide.
+    slider.addEventListener("change", () => {
         removeAllChildNodes(gridContainer);
 
         // Generating a new grid.
         initiateGrid(gridContainer, gridDensity);
-
-        // Displaying new gridDensity value.
-        sliderValueDisplay.textContent = `${gridDensity} X ${gridDensity}`;
     });
 
     // Copyright and current year.
